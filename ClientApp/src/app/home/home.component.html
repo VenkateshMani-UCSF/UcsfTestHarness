@@ -2,13 +2,29 @@
 
 <div class="input-group mb-3">
   <div class="col-xs-2">
-    <button (click)="goToPatientApp()" type="button" class="btn btn-primary button-margin">PatientApp</button>
+    <button (click)="goToPatientAppWithAuthCode()" type="button" class="btn btn-primary button-margin">PatientApp</button>
   </div>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Code" aria-label="Code" aria-describedby="basic-addon1" #box (blur)="update(box.value)">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="auth-code-group">Auth Code</span>
+      <input type="text" class="form-control" aria-label="Code" aria-describedby="auth-code-group" #auth (blur)="updateAuth(auth.value)">
+    </div>
   </div>
 </div>
 
+<div class="input-group mb-3">
+  <div class="col-xs-2">
+    <button (click)="goToPatientAppWithLaunchCode()" type="button" class="btn btn-primary button-margin">PatientApp</button>
+  </div>
+  <div class="col-sm-6">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="launch-code-group">Launch Code</span>
+      <input type="text" class="form-control" aria-label="Code" aria-describedby="launch-code-group" #launch (blur)="updateLaunch(launch.value)">
+    </div>
+  </div>
+</div>
+
+<hr style="height: 1px;color: darkblue;background-color: darkblue;">
 
 <p>Launch <a href="https://localhost:4501/?iss=https:%2F%2Fstage-unified-api.ucsf.edu%2Fclinical%2Fhdk%2F2.0&launch=70b6f1ac-828e-4416-a33a-9439c63b612c" target="_blank">PatientApp</a></p>
 <p>Launch <a href="https://localhost:4501/?iss=&launch=" target="_blank">PatientApp</a> Expired Error</p>

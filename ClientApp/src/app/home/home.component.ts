@@ -9,18 +9,29 @@ import { DOCUMENT } from '@angular/common';
 export class HomeComponent {
 
   authCode = '';
+  launchCode = '';
 
   constructor(readonly router: Router, @Inject(DOCUMENT) readonly document: Document) { }
 
-  public update(value: string) {
+  public updateAuth(value: string) {
     this.authCode = value;
+  }
+
+  public updateLaunch(value: string) {
+    this.launchCode = value;
   }
 
   get window(): Window { return this.document.defaultView; }
 
-  public goToPatientApp() {
+  public goToPatientAppWithAuthCode() {
     console.log('authCode: ' + this.authCode);
-    const url = 'https://localhost:4501/' + '?code=' + this.authCode;
+    const url = 'https://localhost:4501/' + '?code=' + this.authCode + '&state=PatientApp state';
+    this.redirect(url, '_blank');
+  }
+
+  public goToPatientAppWithLaunchCode() {
+    console.log('authCode: ' + this.authCode);
+    const url = 'https://localhost:4501/' + '?launch=' + this.launchCode;
     this.redirect(url, '_blank');
   }
 

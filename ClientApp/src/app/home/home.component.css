@@ -7,3 +7,9 @@
 .button-margin {
   margin-right: 100px;
 }
+
+.line-break {
+  height: 5px;
+  color: gray;
+  background-color: gray;
+}
