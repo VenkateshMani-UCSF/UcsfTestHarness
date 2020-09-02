@@ -1,27 +1,27 @@
 <h1>UCSF Test Harness</h1>
 
 <div class="input-group mb-3">
-  <div class="col-xs-2">
-    <button (click)="goToPatientAppWithAuthCode()" type="button" class="btn btn-primary button-margin">PatientApp</button>
-  </div>
-  <div class="col-sm-6">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="auth-code-group">Auth Code</span>
-      <input type="text" class="form-control" aria-label="Code" aria-describedby="auth-code-group" #auth (blur)="updateAuth(auth.value)">
+    <div class="col-xs-2">
+        <button (click)="goToPatientAppWithAuthCode();auth.value='';" type="button" class="btn btn-primary button-margin">PatientApp</button>
     </div>
-  </div>
+    <div class="col-sm-6">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="auth-code-group">Auth Code</span>
+            <input type="text" class="form-control" aria-label="Code" aria-describedby="auth-code-group" #auth (blur)="updateAuth(auth.value)">
+        </div>
+    </div>
 </div>
 
 <div class="input-group mb-3">
-  <div class="col-xs-2">
-    <button (click)="goToPatientAppWithLaunchCode()" type="button" class="btn btn-primary button-margin">PatientApp</button>
-  </div>
-  <div class="col-sm-6">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="launch-code-group">Launch Code</span>
-      <input type="text" class="form-control" aria-label="Code" aria-describedby="launch-code-group" #launch (blur)="updateLaunch(launch.value)">
+    <div class="col-xs-2">
+        <button (click)="goToPatientAppWithLaunchCode();launch.value='';" type="button" class="btn btn-primary button-margin">PatientApp</button>
     </div>
-  </div>
+    <div class="col-sm-6">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="launch-code-group">Launch Code</span>
+            <input type="text" class="form-control" aria-label="Code" aria-describedby="launch-code-group" #launch (blur)="updateLaunch(launch.value)">
+        </div>
+    </div>
 </div>
 
 <hr style="height: 1px;color: darkblue;background-color: darkblue;">
