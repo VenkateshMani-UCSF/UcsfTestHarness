@@ -28,13 +28,13 @@ export class HomeComponent {
 
     public goToPatientAppWithAuthCode() {
         console.log('authCode: ' + this.authCode);
-        const url = 'https://localhost:4501/' + '?code=' + this.authCode + '&state=PatientApp state';
+        const url = 'https://localhost:4501/#/' + '?code=' + this.authCode + '&state=PatientApp state';
         this.redirect(url, '_blank');
     }
 
     public goToPatientAppWithLaunchCode() {
         console.log('authCode: ' + this.authCode);
-        const url = 'https://localhost:4501/' + '?launch=' + this.launchCode;
+        const url = 'https://localhost:4501/#/' + '?launch=' + this.launchCode;
         this.redirect(url, '_blank');
     }
 
