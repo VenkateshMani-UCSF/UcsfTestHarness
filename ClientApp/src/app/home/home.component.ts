@@ -34,7 +34,7 @@ export class HomeComponent {
 
     public goToPatientAppWithLaunchCode() {
         console.log('authCode: ' + this.authCode);
-        const url = 'https://localhost:4501/#/' + '?launch=' + this.launchCode;
+        const url = 'https://localhost:4501/startup/' + '?launch=' + this.launchCode + '&iss=12345';
         this.redirect(url, '_blank');
     }
 
